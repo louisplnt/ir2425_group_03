@@ -2,7 +2,7 @@
 
 import rospy
 import actionlib
-from move_base_msgs.msg import MoveBaseAction, MoveBaseActionGoal
+from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 
 class TiagoNavigation:
     def __init__(self):
@@ -12,7 +12,7 @@ class TiagoNavigation:
         rospy.loginfo("move_base action server prêt")
 
     def go_to(self, x, y, theta):
-        goal = MoveBaseActionGoal()
+        goal = MoveBaseGoal()
         goal.target_pose.header.frame_id = "map"
         goal.target_pose.header.stamp = rospy.Time.now()
 
@@ -27,5 +27,5 @@ class TiagoNavigation:
 
 if __name__ == "__main__":
     navigation = TiagoNavigation()
-    navigation.go_to(8.75, 0.129, 0)
-    navigation.go_to(1.1355, -0.553829, 0)
+    navigation.go_to(8, 0, 1.0)
+    #navigation.go_to(, -0.553829, 1.0)
