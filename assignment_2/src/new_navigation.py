@@ -29,3 +29,5 @@ if __name__ == "__main__":
     navigation = TiagoNavigation()
     navigation.go_to(8, 0, 1.0)
     #navigation.go_to(, -0.553829, 1.0)
+
+#test
